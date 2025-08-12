@@ -1,0 +1,28 @@
+[user]
+	name = rodel.cabubas
+	email =
+	signingkey =
+[alias]
+  st = status
+  p = push -u origin HEAD
+  l = log --graph
+  stg-bg = add ./src/*
+  unstg = restore --staged .
+
+[pull]
+	ff = only
+	rebase = false
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
