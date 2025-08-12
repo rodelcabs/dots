@@ -17,11 +17,11 @@ map({ "n", "v" }, "<C-j>", "<C-w>j", opts)
 map({ "n", "v" }, "<C-k>", "<C-w>k", opts)
 map({ "n", "v" }, "<C-l>", "<C-w>l", opts)
 
-map("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { silent = true })
-map("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>", { silent = true })
-map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>", { silent = true })
-map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>", { silent = true })
-map("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { silent = true })
+-- map("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { silent = true })
+-- map("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>", { silent = true })
+-- map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>", { silent = true })
+-- map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>", { silent = true })
+-- map("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { silent = true })
 
 -- exlorer
 vim.keymap.del("n", "<leader>e") -- unmap the default toggle

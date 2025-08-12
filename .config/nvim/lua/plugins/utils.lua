@@ -47,6 +47,9 @@ return {
           link = "Normal",
         },
       },
+      start_in_insert = true,
+      insert_mappings = true,
+      persist_mode = false,
     },
   },
   {

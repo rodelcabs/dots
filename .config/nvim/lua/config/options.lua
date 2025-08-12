@@ -8,3 +8,4 @@ vim.g.lazyvim_picker = "telescope"
 vim.opt.background = "dark"
 vim.g.nord_italic = false
 vim.g.sonokai_style = "maia"
+vim.o.fixendofline = false

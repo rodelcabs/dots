@@ -5,6 +5,7 @@ return {
   priority = 1000,
   config = function()
     require("catppuccin").setup({
+      no_italic = true,
       background = {
         light = "latte",
         dark = "mocha",
