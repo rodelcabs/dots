@@ -1,8 +1,8 @@
 # install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # use bash as default
-chsh -s /bin/bash # might ask for password
+#chsh -s /bin/bash # might ask for password
 
 # remove bashrc incase it exists
 rm ~/.bashrc

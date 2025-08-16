@@ -14,7 +14,8 @@ return {
     },
     opts = {
       options = {
-        always_show_bufferline = true,
+        mode = "tabs",
+        always_show_bufferline = false,
         tab_size = 20,
         offsets = {
           {
@@ -24,6 +25,14 @@ return {
             text_align = "left",
           },
         },
+        custom_filter = function(buf, buf_nums)
+          -- get the current tab page number
+          local current_tab = vim.api.nvim_get_current_tabpage()
+          -- get a list of buffers for a specific tab
+          local tab_buffers = vim.fn.tabpagebuflist(current_tab)
+          -- check if the current buffer is being viewed in the current tab
+          return vim.tbl_contains(tab_buffers, buf)
+        end,
       },
     },
   },
@@ -33,6 +42,7 @@ return {
       picker = { enabled = false },
       explorer = { enabled = false },
       terminal = { enabled = false },
+      indent = { enabled = false },
       scroll = {
         enabled = true,
         animate = {
@@ -138,7 +148,7 @@ return {
       completion = {
         menu = {
           border = "none",
-          winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDoc,CursorLine:BlinkCmpDocCursorLine,Search:None",
+          winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDoc,Search:None",
         },
         documentation = {
           window = {
